@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>שומרי סף · VR</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;700&display=swap">
+<style>
+  :root { --bg: #0d0a07; --ink: #f6ecdc; --muted: #cdbb9c; --gold: #e8b55a; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font: 16px/1.5 Heebo, "Segoe UI", sans-serif; overflow: hidden; }
+  canvas { display: block; }
+  #start { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+           background: radial-gradient(ellipse at 50% 60%, rgba(60,36,14,.9), rgba(8,6,4,.97)); z-index: 10; text-align: center; padding: 24px; }
+  #start h1 { font-weight: 700; font-size: clamp(28px, 6vw, 46px); margin: 0; }
+  #start p { max-width: 560px; margin: 0; color: var(--muted); }
+  #start .note { font-size: 14px; opacity: .85; }
+  #start .warn { font-size: 17px; color: var(--ink); background: rgba(255,255,255,.06); border: 1px solid rgba(232,181,90,.4); border-radius: 12px; padding: 12px 16px; }
+  #go { font: inherit; font-weight: 500; font-size: 20px; padding: 12px 40px; border-radius: 999px; border: 0; background: var(--gold); color: #1a1408; cursor: pointer; }
+  #go:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="start">
+  <h1>שומרי סף · פיילוט VR</h1>
+  <p class="warn">לפני שמתחילים: התרגול עוסק במצוקה נפשית של צעירה ובמניעת אובדנות. אם זה קשה לכם, אפשר לעצור בכל רגע: להסיר את הקסדה או לסגור את הדף. צריכים לדבר? ער"ן 1201.</p>
+  <p>אתם המורים שלה. אחרי הלימודים אתם מוצאים אותה יושבת לבד על ספסל בגבעה. הביטו סביב, ובחרו מה לומר לה.</p>
+  <button id="go">להתחיל</button>
+  <p class="note">במחשב: גררו כדי להסתכל סביב, והקליקו על בועה. בטלפון: הזיזו את הטלפון כדי להסתכל, והקישו על בועה. בקסדה: שבו, לחצו ENTER VR, ובחרו במבט ממושך או בטריגר.</p>
+  <p class="note">העולם נבנה בקוד · הדמות נוצרה בבינה מלאכותית ואינה אדם אמיתי · הקול סינתטי</p>
+</div>
+<script type="module" src="vr.js"></script>
+</body>
+</html>
