@@ -1,0 +1,6557 @@
+{
+ "_meta": "Built from story/conversation_v1.md (draft 1, not clinically approved). Loop rules (script s.2): a chosen non-BEST bubble disappears and the other two come back; after two errors only BEST and '(לשתוק ולחכות)' remain (silence: P-WAIT 4 s, dT=0, retry); in N0 and R0 only BEST remains. State ids: <N>~w1/~m1 = after one error (last error WMW/SUB), <N>~w2/~m2 = after two errors (N4/N5 use ~w/~m for one error); N0~2 = N0 after two errors; R1~w/R1~m/R1~2 likewise. R0.<state> = trust collapse that returns to <state>; R0.<state>/w, /m = after one error there, /2 = after two (BEST only). Trust is clamped by the engine to trustRange (script: 0..12); R0 BEST uses trustSet 2 (script: T := 2). R0 rules that can never fire, and unreachable states, are pruned. Beat {black: s} = fade to black for s seconds, then back.",
+ "clips": {
+  "P-WAIT": "person/wait_nb_packed.mp4",
+  "P-DOWN": "person/down_nb_packed.mp4",
+  "M01": "person/clip2_nb_packed.mp4",
+  "M02": "person/sim/M02_packed.mp4",
+  "M03": "person/sim/M03_packed.mp4",
+  "M04": "person/sim/M04_packed.mp4",
+  "G01": "person/sim/G01_packed.mp4",
+  "G02": "person/sim/G02_packed.mp4",
+  "G03": "person/sim/G03_packed.mp4",
+  "G04": "person/sim/G04_packed.mp4",
+  "G05": "person/sim/G05_packed.mp4",
+  "G06": "person/sim/G06_packed.mp4",
+  "G07": "person/sim/G07_packed.mp4",
+  "G08": "person/sim/G08_packed.mp4",
+  "G09": "person/sim/G09_packed.mp4",
+  "G10": "person/sim/G10_packed.mp4",
+  "G11": "person/sim/G11_packed.mp4",
+  "G12": "person/sim/G12_packed.mp4",
+  "G13": "person/sim/G13_packed.mp4",
+  "G14": "person/sim/G14_packed.mp4",
+  "G15": "person/sim/G15_packed.mp4",
+  "G16": "person/sim/G16_packed.mp4",
+  "G17": "person/sim/G17_packed.mp4",
+  "G18": "person/sim/G18_packed.mp4",
+  "G19": "person/sim/G19_packed.mp4",
+  "G20": "person/sim/G20_packed.mp4",
+  "G21": "person/sim/G21_packed.mp4",
+  "G22": "person/sim/G22_packed.mp4",
+  "G23": "person/sim/G23_packed.mp4",
+  "G24": "person/sim/G24_packed.mp4",
+  "G25": "person/sim/G25_packed.mp4",
+  "G26": "person/sim/G26_packed.mp4",
+  "G27": "person/sim/G27_packed.mp4",
+  "G27L": "person/sim/G27L_packed.mp4"
+ },
+ "lines": {
+  "G01": {
+   "src": "audio/sim/G01.mp3",
+   "who": "her",
+   "text": "סתם. עייפה. לא משהו."
+  },
+  "G02": {
+   "src": "audio/sim/G02.mp3",
+   "who": "her",
+   "text": "זה... בבית כל אחד עסוק בשלו. ובכיתה... כאילו, אף אחד לא קולט אם אני שם או לא. אני רק עושה לכולם בעיות."
+  },
+  "G03": {
+   "src": "audio/sim/G03.mp3",
+   "who": "her",
+   "text": "לפעמים נראה לי ש... שלכולם יהיה יותר קל בלעדיי."
+  },
+  "G04": {
+   "src": "audio/sim/G04.mp3",
+   "who": "her",
+   "text": "כן... לפעמים. בעיקר בלילות. אני לא רוצה למות, באמת. אני רק... רוצה שזה יפסיק לכאוב."
+  },
+  "G05": {
+   "src": "audio/sim/G05.mp3",
+   "who": "her",
+   "text": "אף אחד לא שאל אותי את זה. אף פעם."
+  },
+  "G06": {
+   "src": "audio/sim/G06.mp3",
+   "who": "her",
+   "text": "רק שזה יישאר בינינו. בבקשה. ההורים שלי... זה ישבור אותם."
+  },
+  "G07": {
+   "src": "audio/sim/G07.mp3",
+   "who": "her",
+   "text": "אז למה סיפרתי בכלל?"
+  },
+  "G08": {
+   "src": "audio/sim/G08.mp3",
+   "who": "her",
+   "text": "...ממילא אף אחד לא יכול לעזור לי."
+  },
+  "G09": {
+   "src": "audio/sim/G09.mp3",
+   "who": "her",
+   "text": "ומה, ליועצת? היא בכלל לא מכירה אותי."
+  },
+  "G10": {
+   "src": "audio/sim/G10.mp3",
+   "who": "her",
+   "text": "עכשיו? ...ממש עכשיו?"
+  },
+  "G11": {
+   "src": "audio/sim/G11.mp3",
+   "who": "her",
+   "text": "...אוקיי."
+  },
+  "G12": {
+   "src": "audio/sim/G12.mp3",
+   "who": "her",
+   "text": "אני יודעת."
+  },
+  "G13": {
+   "src": "audio/sim/G13.mp3",
+   "who": "her",
+   "text": "כן. הכול טוב."
+  },
+  "G14": {
+   "src": "audio/sim/G14.mp3",
+   "who": "her",
+   "text": "כן. בטח."
+  },
+  "G15": {
+   "src": "audio/sim/G15.mp3",
+   "who": "her",
+   "text": "לא יודעת. אם הייתי יודעת..."
+  },
+  "G16": {
+   "src": "audio/sim/G16.mp3",
+   "who": "her",
+   "text": "לא. מה פתאום."
+  },
+  "G17": {
+   "src": "audio/sim/G17.mp3",
+   "who": "her",
+   "text": "על מה בדיוק? אין מה לדבר."
+  },
+  "G18": {
+   "src": "audio/sim/G18.mp3",
+   "who": "her",
+   "text": "ידעתי שלא הייתי צריכה להגיד."
+  },
+  "G19": {
+   "src": "audio/sim/G19.mp3",
+   "who": "her",
+   "text": "...מעבירים אותי הלאה."
+  },
+  "G20": {
+   "src": "audio/sim/G20.mp3",
+   "who": "her",
+   "text": "באמת? ...אז אף אחד. גם לא היועצת."
+  },
+  "G21": {
+   "src": "audio/sim/G21.mp3",
+   "who": "her",
+   "text": "זה יישאר בינינו... או לא?"
+  },
+  "G22": {
+   "src": "audio/sim/G22.mp3",
+   "who": "her",
+   "text": "אוקיי. אז... זהו?"
+  },
+  "G23": {
+   "src": "audio/sim/G23.mp3",
+   "who": "her",
+   "text": "אני לא מבטיחה כלום."
+  },
+  "G24": {
+   "src": "audio/sim/G24.mp3",
+   "who": "her",
+   "text": "'מה לעשות איתי'... כאילו אני בעיה."
+  },
+  "G25": {
+   "src": "audio/sim/G25.mp3",
+   "who": "her",
+   "text": "...שבוע הבא. אולי."
+  },
+  "G26": {
+   "src": "audio/sim/G26.mp3",
+   "who": "her",
+   "text": "לבד? ...לא. לא לבד."
+  },
+  "G27": {
+   "src": "audio/sim/G27.mp3",
+   "who": "her",
+   "text": "די. לא משנה."
+  },
+  "NR01a": {
+   "src": "audio/sim/NR01a.mp3",
+   "who": "narr",
+   "text": "אתם המורים של נועה. בשבועות האחרונים היא נראית עייפה, בלי אנרגיה. הציונים צנחו, היא מחסירה הרבה, וכמעט לא מדברת עם אף אחד."
+  },
+  "NR01b": {
+   "src": "audio/sim/NR01b.mp3",
+   "who": "narr",
+   "text": "היא הפסיקה לבוא לחזרות של הלהקה, שהיא כל כך אהבה. ובקבוצת הכיתה היא כתבה: 'לא משנה כבר.' מה אתם עושים?"
+  },
+  "NR02": {
+   "src": "audio/narration_01.mp3",
+   "who": "narr",
+   "text": "היא לא אומרת מילה. מה תגידו לה?"
+  },
+  "W0": {
+   "src": "audio/sim/W0.mp3",
+   "who": "narr",
+   "text": "תחושת הבטן אומרת שיש כאן מצוקה. תשמחו על התחושה הזאת, ותפעלו."
+  },
+  "W1": {
+   "src": "audio/sim/W1.mp3",
+   "who": "narr",
+   "text": "לא לשפוט ולא לבקר. רק לגשת, ולהתעניין."
+  },
+  "W2": {
+   "src": "audio/sim/W2.mp3",
+   "who": "narr",
+   "text": "לפעמים היא בודקת אם באמת אכפת לכם. להתעקש, בסבלנות."
+  },
+  "W3": {
+   "src": "audio/sim/W3.mp3",
+   "who": "narr",
+   "text": "ככל שתדברו פחות, השיחה עובדת יותר. ובלי 'יהיה בסדר'."
+  },
+  "W4": {
+   "src": "audio/sim/W4.mp3",
+   "who": "narr",
+   "text": "לשאול ישירות, במילים ברורות. השאלה לא מכניסה רעיון. היא אומרת לה: אפשר לדבר איתי על זה."
+  },
+  "W5": {
+   "src": "audio/sim/W5.mp3",
+   "who": "narr",
+   "text": "היא סיפרה לכם משהו גדול. קודם להישאר רגועים, ולהיות איתה."
+  },
+  "W6": {
+   "src": "audio/sim/W6.mp3",
+   "who": "narr",
+   "text": "לא מבטיחים סוד. אומרים בעדינות שמשתפים, כי אכפת."
+  },
+  "W7": {
+   "src": "audio/sim/W7.mp3",
+   "who": "narr",
+   "text": "היא כועסת, כי היא מפחדת. להישאר איתה, ולא לעשות כלום מאחורי הגב שלה."
+  },
+  "W8": {
+   "src": "audio/sim/W8.mp3",
+   "who": "narr",
+   "text": "לשכנע זה להזמין, לא לדחוף. ומספר טלפון הוא עוד לא ליווי."
+  },
+  "W9": {
+   "src": "audio/sim/W9.mp3",
+   "who": "narr",
+   "text": "להזמין אותה, ולהגיד לה שאתם באים איתה."
+  },
+  "W10": {
+   "src": "audio/sim/W10.mp3",
+   "who": "narr",
+   "text": "ללוות. ממש ללכת איתה, עכשיו."
+  },
+  "WR0": {
+   "src": "audio/sim/WR0.mp3",
+   "who": "narr",
+   "text": "אפשר לתקן. חזרו אליה."
+  },
+  "WR1": {
+   "src": "audio/sim/WR1.mp3",
+   "who": "narr",
+   "text": "הבטחה כזו אי אפשר לקיים. אפשר לתקן: להגיד לה את האמת, עכשיו."
+  },
+  "NR03a": {
+   "src": "audio/sim/NR03a.mp3",
+   "who": "narr",
+   "text": "לא לשפוט. לא להטיף. ולא להגיד לה 'יהיה בסדר'. להקשיב. לשאול ישירות. ולבוא איתה."
+  },
+  "NR03b": {
+   "src": "audio/sim/NR03b.mp3",
+   "who": "narr",
+   "text": "נועה עוד לא בסדר. אבל היא כבר לא לבד עם זה. וזו רק ההתחלה."
+  },
+  "NR04a": {
+   "src": "audio/sim/NR04a.mp3",
+   "who": "narr",
+   "text": "מה תרגלתם כאן? ארבע פעולות."
+  },
+  "NR04b": {
+   "src": "audio/sim/NR04b.mp3",
+   "who": "narr",
+   "text": "לראות את הסימנים, ולא לחכות. גם תחושת בטן היא סיבה לפעול."
+  },
+  "NR04c": {
+   "src": "audio/sim/NR04c.mp3",
+   "who": "narr",
+   "text": "להקשיב, ולדבר מעט. בלי לשפוט, בלי לבקר, בלי להטיף, ובלי 'יהיה בסדר'."
+  },
+  "NR04d": {
+   "src": "audio/sim/NR04d.mp3",
+   "who": "narr",
+   "text": "לשאול ישירות על מחשבות אובדניות. שאלה כזו לא מכניסה רעיון. היא אומרת לה: אפשר לדבר איתי על זה. מחקרים מראים ששאלה ישירה על מחשבות אובדניות לא מגבירה אותן, ואף עשויה להקל."
+  },
+  "NR04e": {
+   "src": "audio/sim/NR04e.mp3",
+   "who": "narr",
+   "text": "לא להבטיח סוד, ולהגיד לה למה: כי אכפת. ולשכנע אותה לבוא איתכם לעזרה, עכשיו."
+  },
+  "NR04f": {
+   "src": "audio/sim/NR04f.mp3",
+   "who": "narr",
+   "text": "גם כשהיא אומרת 'אני לא רוצה למות', מחשבות אובדניות הן סיבה להפניה עכשיו. את רמת הסיכון מעריכים אנשי המקצוע, לא אתם. קודם להכיל, ומיד אחר כך להפנות."
+  },
+  "NR04g": {
+   "src": "audio/sim/NR04g.mp3",
+   "who": "narr",
+   "text": "לא משאירים אותה לבד עד שאיש מקצוע לוקח אחריות. אם היועצת לא בבית הספר, מתקשרים אליה או להנהלה עכשיו, יחד איתה. בסכנה מיידית: 101."
+  },
+  "NR04h1": {
+   "src": "audio/sim/NR04h1.mp3",
+   "who": "narr",
+   "text": "בבית הספר מעדכנים מיד את היועצת, את הפסיכולוג החינוכי ואת ההנהלה. איך ומתי מעדכנים את ההורים, קובע הצוות המקצועי."
+  },
+  "NR04h2": {
+   "src": "audio/sim/NR04h2.mp3",
+   "who": "narr",
+   "text": "לפעמים זה יהיה קל, ולפעמים תצטרכו להתעקש. ואם השיחה הזו עוררה בכם משהו, מותר ורצוי לדבר על זה."
+  }
+ },
+ "stages": [
+  "זיהוי סימני מצוקה",
+  "הקשבה",
+  "שאלה ישירה",
+  "שכנוע והפניה"
+ ],
+ "start": "N0",
+ "trustStart": 3,
+ "nodes": {
+  "N0": {
+   "stage": 0,
+   "beats": [
+    {
+     "clip": "P-WAIT",
+     "loop": true,
+     "line": "NR01a"
+    },
+    {
+     "line": "NR01b"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני ניגש/ת אליה. עכשיו.",
+     "kind": "best",
+     "trust": 0,
+     "beats": [
+      {
+       "black": 0.6
+      }
+     ],
+     "next": "N1"
+    },
+    {
+     "text": "זה גיל ההתבגרות. זה יעבור לה.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "M04"
+      }
+     ],
+     "next": "N0~w1"
+    },
+    {
+     "text": "אשלח לה הודעה בערב, שתדע שאני פה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "M04"
+      }
+     ],
+     "next": "N0~m1"
+    }
+   ]
+  },
+  "N0~w1": {
+   "stage": 0,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני ניגש/ת אליה. עכשיו.",
+     "kind": "best",
+     "trust": 0,
+     "beats": [
+      {
+       "black": 0.6
+      }
+     ],
+     "next": "N1"
+    },
+    {
+     "text": "אשלח לה הודעה בערב, שתדע שאני פה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "M04"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W0"
+      }
+     ],
+     "next": "N0~2"
+    }
+   ]
+  },
+  "N0~m1": {
+   "stage": 0,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני ניגש/ת אליה. עכשיו.",
+     "kind": "best",
+     "trust": 0,
+     "beats": [
+      {
+       "black": 0.6
+      }
+     ],
+     "next": "N1"
+    },
+    {
+     "text": "זה גיל ההתבגרות. זה יעבור לה.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "M04"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W0"
+      }
+     ],
+     "next": "N0~2"
+    }
+   ]
+  },
+  "N0~2": {
+   "stage": 0,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני ניגש/ת אליה. עכשיו.",
+     "kind": "best",
+     "trust": 0,
+     "beats": [
+      {
+       "black": 0.6
+      }
+     ],
+     "next": "N1"
+    }
+   ]
+  },
+  "N1": {
+   "stage": 1,
+   "beats": [
+    {
+     "clip": "P-DOWN"
+    },
+    {
+     "clip": "P-WAIT",
+     "loop": true,
+     "line": "NR02"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "היי, מה שלומך? אני דואג/ת לך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N2"
+    },
+    {
+     "text": "נועה, מה קורה? הציונים שלך ממש ירדו.",
+     "kind": "wrong",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G12",
+       "line": "G12"
+      }
+     ],
+     "next": "N1~w1"
+    },
+    {
+     "text": "את נראית עייפה. הכול טוב?",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G13",
+       "line": "G13"
+      }
+     ],
+     "next": "N1~m1"
+    }
+   ]
+  },
+  "N1~w1": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא בגלל הציונים. אני דואג/ת לך. מה שלומך?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N2"
+    },
+    {
+     "text": "את נראית עייפה. הכול טוב?",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G13",
+       "line": "G13"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W1"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N1~m2"
+      },
+      {
+       "go": "N1~m2"
+      }
+     ]
+    }
+   ]
+  },
+  "N1~m1": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני שואל/ת כי אני דואג/ת לך. מה שלומך באמת?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N2"
+    },
+    {
+     "text": "נועה, מה קורה? הציונים שלך ממש ירדו.",
+     "kind": "wrong",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G12",
+       "line": "G12"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W1"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N1~w2"
+      },
+      {
+       "go": "N1~w2"
+      }
+     ]
+    }
+   ]
+  },
+  "N1~w2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא בגלל הציונים. אני דואג/ת לך. מה שלומך?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N2"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N1~m2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני שואל/ת כי אני דואג/ת לך. מה שלומך באמת?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N2"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N2": {
+   "stage": 1,
+   "beats": [
+    {
+     "clip": "G01",
+     "line": "G01"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני לא ממהר/ת. ספרי לי מה עובר עלייך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N3"
+    },
+    {
+     "text": "אני חושב/ת שאת צריכה לישון יותר.",
+     "kind": "wrong",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "M04"
+      }
+     ],
+     "next": "N2~w1"
+    },
+    {
+     "text": "אם תצטרכי משהו, אני פה.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G13",
+       "line": "G13"
+      }
+     ],
+     "next": "N2~m1"
+    }
+   ]
+  },
+  "N2~w1": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "סליחה, לא באתי להטיף. ספרי לי מה עובר עלייך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N3"
+    },
+    {
+     "text": "אם תצטרכי משהו, אני פה.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G13",
+       "line": "G13"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W2"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N2~m2"
+      },
+      {
+       "go": "N2~m2"
+      }
+     ]
+    }
+   ]
+  },
+  "N2~m1": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני לא הולך/ת. ספרי לי מה עובר עלייך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N3"
+    },
+    {
+     "text": "אני חושב/ת שאת צריכה לישון יותר.",
+     "kind": "wrong",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "M04"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W2"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N2~w2"
+      },
+      {
+       "go": "N2~w2"
+      }
+     ]
+    }
+   ]
+  },
+  "N2~w2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "סליחה, לא באתי להטיף. ספרי לי מה עובר עלייך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N3"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N2~m2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני לא הולך/ת. ספרי לי מה עובר עלייך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N3"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N3": {
+   "stage": 1,
+   "beats": [
+    {
+     "clip": "G02",
+     "line": "G02"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "תודה שאת משתפת. אני מבין/ה שזה גדול. תספרי עוד?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N4"
+    },
+    {
+     "text": "יהיה בסדר, זה יעבור. את חזקה.",
+     "kind": "wrong",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G14",
+       "line": "G14"
+      }
+     ],
+     "next": "N3~w1"
+    },
+    {
+     "text": "ומה את חושבת שאפשר לעשות עם זה?",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G15",
+       "line": "G15"
+      }
+     ],
+     "next": "N3~m1"
+    }
+   ]
+  },
+  "N3~w1": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "זה לא נשמע בסדר. תודה שאת משתפת. תספרי עוד?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N4"
+    },
+    {
+     "text": "ומה את חושבת שאפשר לעשות עם זה?",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G15",
+       "line": "G15"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W3"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N3~m2"
+      },
+      {
+       "go": "N3~m2"
+      }
+     ]
+    }
+   ]
+  },
+  "N3~m1": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא צריך פתרון עכשיו. תספרי לי עוד?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N4"
+    },
+    {
+     "text": "יהיה בסדר, זה יעבור. את חזקה.",
+     "kind": "wrong",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G14",
+       "line": "G14"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W3"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N3~w2"
+      },
+      {
+       "go": "N3~w2"
+      }
+     ]
+    }
+   ]
+  },
+  "N3~w2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "זה לא נשמע בסדר. תודה שאת משתפת. תספרי עוד?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N4"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N3~m2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא צריך פתרון עכשיו. תספרי לי עוד?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N4"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N4": {
+   "stage": 2,
+   "beats": [
+    {
+     "clip": "G03",
+     "line": "G03"
+    },
+    {
+     "clip": "P-WAIT",
+     "loop": true,
+     "hold": 3
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני רואה שאת סובלת מאוד. יש לך מחשבות אובדניות?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust>=6",
+       "go": "N5a"
+      },
+      {
+       "go": "N5"
+      }
+     ]
+    },
+    {
+     "text": "אני מקווה שאת לא חושבת להתאבד, נכון?",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G16",
+       "line": "G16"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W4"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N4~w"
+      },
+      {
+       "go": "N4~w"
+      }
+     ]
+    },
+    {
+     "text": "זה נשמע קשה. אולי כדאי לדבר עם היועצת?",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G17",
+       "line": "G17"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W4"
+      }
+     ],
+     "next": "N4~m"
+    }
+   ]
+  },
+  "N4~w": {
+   "stage": 2,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני שואל/ת ברצינות. יש לך מחשבות אובדניות?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust>=6",
+       "go": "N5a"
+      },
+      {
+       "go": "N5"
+      }
+     ]
+    },
+    {
+     "text": "זה נשמע קשה. אולי כדאי לדבר עם היועצת?",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G17",
+       "line": "G17"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N4~m2"
+      },
+      {
+       "go": "N4~m2"
+      }
+     ]
+    }
+   ]
+  },
+  "N4~m": {
+   "stage": 2,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני רואה שאת סובלת מאוד. יש לך מחשבות אובדניות?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust>=6",
+       "go": "N5a"
+      },
+      {
+       "go": "N5"
+      }
+     ]
+    },
+    {
+     "text": "אני מקווה שאת לא חושבת להתאבד, נכון?",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G16",
+       "line": "G16"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N4~w2"
+      },
+      {
+       "go": "N4~w2"
+      }
+     ]
+    }
+   ]
+  },
+  "N4~w2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני שואל/ת ברצינות. יש לך מחשבות אובדניות?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust>=6",
+       "go": "N5a"
+      },
+      {
+       "go": "N5"
+      }
+     ]
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N4~m2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני רואה שאת סובלת מאוד. יש לך מחשבות אובדניות?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust>=6",
+       "go": "N5a"
+      },
+      {
+       "go": "N5"
+      }
+     ]
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N5": {
+   "stage": 2,
+   "beats": [
+    {
+     "clip": "G04",
+     "line": "G04"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "טוב שסיפרת לי. אני כאן איתך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [
+      {
+       "clip": "M01"
+      }
+     ],
+     "next": "N6"
+    },
+    {
+     "text": "מה פתאום! יש לך כל כך הרבה בשביל מה לחיות.",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G18",
+       "line": "G18"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W5"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N5~w"
+      },
+      {
+       "go": "N5~w"
+      }
+     ]
+    },
+    {
+     "text": "זה כבר גדול עליי. זה בשביל היועצת.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G19",
+       "line": "G19"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W5"
+      }
+     ],
+     "next": "N5~m"
+    }
+   ]
+  },
+  "N5a": {
+   "stage": 2,
+   "beats": [
+    {
+     "clip": "G04",
+     "line": "G04"
+    },
+    {
+     "clip": "G05",
+     "line": "G05"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "טוב שסיפרת לי. אני כאן איתך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [
+      {
+       "clip": "M01"
+      }
+     ],
+     "next": "N6"
+    },
+    {
+     "text": "מה פתאום! יש לך כל כך הרבה בשביל מה לחיות.",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G18",
+       "line": "G18"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W5"
+      }
+     ],
+     "next": "N5~w"
+    },
+    {
+     "text": "זה כבר גדול עליי. זה בשביל היועצת.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G19",
+       "line": "G19"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W5"
+      }
+     ],
+     "next": "N5~m"
+    }
+   ]
+  },
+  "N5~w": {
+   "stage": 2,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "סליחה. טוב שסיפרת לי. אני כאן איתך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [
+      {
+       "clip": "M01"
+      }
+     ],
+     "next": "N6"
+    },
+    {
+     "text": "זה כבר גדול עליי. זה בשביל היועצת.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G19",
+       "line": "G19"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N5~m2"
+      },
+      {
+       "go": "N5~m2"
+      }
+     ]
+    }
+   ]
+  },
+  "N5~m": {
+   "stage": 2,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני לא הולך/ת לשום מקום. אני כאן איתך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [
+      {
+       "clip": "M01"
+      }
+     ],
+     "next": "N6"
+    },
+    {
+     "text": "מה פתאום! יש לך כל כך הרבה בשביל מה לחיות.",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G18",
+       "line": "G18"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N5~w2"
+      },
+      {
+       "go": "N5~w2"
+      }
+     ]
+    }
+   ]
+  },
+  "N5~w2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "סליחה. טוב שסיפרת לי. אני כאן איתך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [
+      {
+       "clip": "M01"
+      }
+     ],
+     "next": "N6"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N5~m2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני לא הולך/ת לשום מקום. אני כאן איתך.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [
+      {
+       "clip": "M01"
+      }
+     ],
+     "next": "N6"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N6": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G06",
+     "line": "G06"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "אני לא יכול/ה להבטיח סוד, כי אכפת לי ממך.",
+     "kind": "best",
+     "trust": -1,
+     "beats": [],
+     "next": "N7"
+    },
+    {
+     "text": "בסדר. זה יישאר בינינו, מבטיח/ה.",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G20",
+       "line": "G20"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W6"
+      }
+     ],
+     "next": "R1"
+    },
+    {
+     "text": "בואי נחליט על זה אחר כך. קודם תירגעי.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G21",
+       "line": "G21"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W6"
+      }
+     ],
+     "next": "N6~m"
+    }
+   ]
+  },
+  "N6~m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא. אני לא יכול/ה להבטיח סוד, כי אכפת לי ממך.",
+     "kind": "best",
+     "trust": -1,
+     "beats": [],
+     "next": "N7"
+    },
+    {
+     "text": "בסדר. זה יישאר בינינו, מבטיח/ה.",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G20",
+       "line": "G20"
+      }
+     ],
+     "next": "R1"
+    }
+   ]
+  },
+  "N7": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G07",
+     "line": "G07"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "טוב שסיפרת. שום דבר לא יקרה מאחורי הגב שלך.",
+     "kind": "best",
+     "trust": 2,
+     "beats": [],
+     "next": "N8"
+    },
+    {
+     "text": "זה לטובתך. יום אחד עוד תודי לי.",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "M04"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N7~w1"
+      },
+      {
+       "go": "N7~w1"
+      }
+     ]
+    },
+    {
+     "text": "ככה זה. זה הנוהל, אין לי ברירה.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G22",
+       "line": "G22"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N7~m1"
+      },
+      {
+       "go": "N7~m1"
+      }
+     ]
+    }
+   ]
+  },
+  "N7~w1": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "סליחה. לא אעשה כלום מאחורי הגב שלך.",
+     "kind": "best",
+     "trust": 2,
+     "beats": [],
+     "next": "N8"
+    },
+    {
+     "text": "ככה זה. זה הנוהל, אין לי ברירה.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G22",
+       "line": "G22"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W7"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N7~m2"
+      },
+      {
+       "go": "N7~m2"
+      }
+     ]
+    }
+   ]
+  },
+  "N7~m1": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא בגלל נוהל. כי אכפת לי. ואת תהיי בכל צעד.",
+     "kind": "best",
+     "trust": 2,
+     "beats": [],
+     "next": "N8"
+    },
+    {
+     "text": "זה לטובתך. יום אחד עוד תודי לי.",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "M04"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W7"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N7~w2"
+      },
+      {
+       "go": "N7~w2"
+      }
+     ]
+    }
+   ]
+  },
+  "N7~w2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "סליחה. לא אעשה כלום מאחורי הגב שלך.",
+     "kind": "best",
+     "trust": 2,
+     "beats": [],
+     "next": "N8"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N7~m2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא בגלל נוהל. כי אכפת לי. ואת תהיי בכל צעד.",
+     "kind": "best",
+     "trust": 2,
+     "beats": [],
+     "next": "N8"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N8": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G08",
+     "line": "G08"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "את לא צריכה להישאר עם זה לבד. אני רוצה לעזור.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N9"
+    },
+    {
+     "text": "טיפול ממש עוזר. תבטיחי לי שתלכי, טוב?",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G23",
+       "line": "G23"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N8~w1"
+      },
+      {
+       "go": "N8~w1"
+      }
+     ]
+    },
+    {
+     "text": "הנה מספר של קו סיוע. תתקשרי כשתרגישי מוכנה.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G22",
+       "line": "G22"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N8~m1"
+      },
+      {
+       "go": "N8~m1"
+      }
+     ]
+    }
+   ]
+  },
+  "N8~w1": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא צריך להבטיח. אני רוצה לעזור, ואת לא לבד.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N9"
+    },
+    {
+     "text": "הנה מספר של קו סיוע. תתקשרי כשתרגישי מוכנה.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G22",
+       "line": "G22"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W8"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N8~m2"
+      },
+      {
+       "go": "N8~m2"
+      }
+     ]
+    }
+   ]
+  },
+  "N8~m1": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא, זה לא זהו. אני רוצה לעזור, ואת לא לבד.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N9"
+    },
+    {
+     "text": "טיפול ממש עוזר. תבטיחי לי שתלכי, טוב?",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G23",
+       "line": "G23"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W8"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N8~w2"
+      },
+      {
+       "go": "N8~w2"
+      }
+     ]
+    }
+   ]
+  },
+  "N8~w2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא צריך להבטיח. אני רוצה לעזור, ואת לא לבד.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N9"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N8~m2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא, זה לא זהו. אני רוצה לעזור, ואת לא לבד.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "N9"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N9": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G09",
+     "line": "G09"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "תסכימי לבוא איתי לקבל עזרה? אני אהיה שם.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust<=5",
+       "go": "N10h"
+      },
+      {
+       "go": "N10"
+      }
+     ]
+    },
+    {
+     "text": "היא מקצועית. היא תדע מה לעשות איתך.",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G24",
+       "line": "G24"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N9~w1"
+      },
+      {
+       "go": "N9~w1"
+      }
+     ]
+    },
+    {
+     "text": "היא ממש בסדר, תני לה צ'אנס.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G14",
+       "line": "G14"
+      }
+     ],
+     "next": "N9~m1"
+    }
+   ]
+  },
+  "N9~w1": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "את לא בעיה. תסכימי לבוא איתי? אני אהיה שם.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust<=5",
+       "go": "N10h"
+      },
+      {
+       "go": "N10"
+      }
+     ]
+    },
+    {
+     "text": "היא ממש בסדר, תני לה צ'אנס.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G14",
+       "line": "G14"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W9"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N9~m2"
+      },
+      {
+       "go": "N9~m2"
+      }
+     ]
+    }
+   ]
+  },
+  "N9~m1": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא תהיי שם לבד. תסכימי לבוא איתי לקבל עזרה?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust<=5",
+       "go": "N10h"
+      },
+      {
+       "go": "N10"
+      }
+     ]
+    },
+    {
+     "text": "היא מקצועית. היא תדע מה לעשות איתך.",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G24",
+       "line": "G24"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W9"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N9~w2"
+      },
+      {
+       "go": "N9~w2"
+      }
+     ]
+    }
+   ]
+  },
+  "N9~w2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "את לא בעיה. תסכימי לבוא איתי? אני אהיה שם.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust<=5",
+       "go": "N10h"
+      },
+      {
+       "go": "N10"
+      }
+     ]
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N9~m2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא תהיי שם לבד. תסכימי לבוא איתי לקבל עזרה?",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": [
+      {
+       "if": "trust<=5",
+       "go": "N10h"
+      },
+      {
+       "go": "N10"
+      }
+     ]
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N10": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G10",
+     "line": "G10"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "כן, עכשיו. אבוא איתך עד שנמצא מי שיעזור.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "C1"
+    },
+    {
+     "text": "נקבע לך איתה פגישה לשבוע הבא, טוב?",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G25",
+       "line": "G25"
+      }
+     ],
+     "next": "N10~w1"
+    },
+    {
+     "text": "אני סומך/ת עלייך. לכי אליה, ותספרי לי.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G26",
+       "line": "G26"
+      }
+     ],
+     "next": "N10~m1"
+    }
+   ]
+  },
+  "N10h": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "M04"
+    },
+    {
+     "clip": "G10",
+     "line": "G10"
+    }
+   ],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "כן, עכשיו. אבוא איתך עד שנמצא מי שיעזור.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "C1"
+    },
+    {
+     "text": "נקבע לך איתה פגישה לשבוע הבא, טוב?",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G25",
+       "line": "G25"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N10~w1"
+      },
+      {
+       "go": "N10~w1"
+      }
+     ]
+    },
+    {
+     "text": "אני סומך/ת עלייך. לכי אליה, ותספרי לי.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G26",
+       "line": "G26"
+      }
+     ],
+     "next": "N10~m1"
+    }
+   ]
+  },
+  "N10~w1": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא, עכשיו. אבוא איתך עד שנמצא מי שיעזור.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "C1"
+    },
+    {
+     "text": "אני סומך/ת עלייך. לכי אליה, ותספרי לי.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G26",
+       "line": "G26"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W10"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N10~m2"
+      },
+      {
+       "go": "N10~m2"
+      }
+     ]
+    }
+   ]
+  },
+  "N10~m1": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא לבד. אני בא/ה איתך, עכשיו.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "C1"
+    },
+    {
+     "text": "נקבע לך איתה פגישה לשבוע הבא, טוב?",
+     "kind": "wrong",
+     "trust": -2,
+     "beats": [
+      {
+       "clip": "G25",
+       "line": "G25"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "W10"
+      }
+     ],
+     "next": [
+      {
+       "if": "trust<=1",
+       "go": "R0.N10~w2"
+      },
+      {
+       "go": "N10~w2"
+      }
+     ]
+    }
+   ]
+  },
+  "N10~w2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא, עכשיו. אבוא איתך עד שנמצא מי שיעזור.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "C1"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "N10~m2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "לא לבד. אני בא/ה איתך, עכשיו.",
+     "kind": "best",
+     "trust": 1,
+     "beats": [],
+     "next": "C1"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "R1": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "טעיתי. אני לא יכול/ה להבטיח סוד. אכפת לי ממך.",
+     "kind": "best",
+     "trust": 0,
+     "beats": [],
+     "next": "N7"
+    },
+    {
+     "text": "נכון. אף אחד.",
+     "kind": "wrong",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR1"
+      }
+     ],
+     "next": "R1~w"
+    },
+    {
+     "text": "נדבר על זה אחר כך.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G21",
+       "line": "G21"
+      },
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "line": "WR1"
+      }
+     ],
+     "next": "R1~m"
+    }
+   ]
+  },
+  "R1~w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "טעיתי. אני לא יכול/ה להבטיח סוד. אכפת לי ממך.",
+     "kind": "best",
+     "trust": 0,
+     "beats": [],
+     "next": "N7"
+    },
+    {
+     "text": "נדבר על זה אחר כך.",
+     "kind": "miss",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "G21",
+       "line": "G21"
+      }
+     ],
+     "next": "R1~2"
+    }
+   ]
+  },
+  "R1~m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "טעיתי. אני לא יכול/ה להבטיח סוד. אכפת לי ממך.",
+     "kind": "best",
+     "trust": 0,
+     "beats": [],
+     "next": "N7"
+    },
+    {
+     "text": "נכון. אף אחד.",
+     "kind": "wrong",
+     "trust": -1,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R1~2"
+    }
+   ]
+  },
+  "R1~2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "P-WAIT",
+   "options": [
+    {
+     "text": "טעיתי. אני לא יכול/ה להבטיח סוד. אכפת לי ממך.",
+     "kind": "best",
+     "trust": 0,
+     "beats": [],
+     "next": "N7"
+    },
+    {
+     "text": "(לשתוק ולחכות)",
+     "kind": "silence",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "P-WAIT",
+       "loop": true,
+       "hold": 4
+      }
+     ],
+     "next": "retry"
+    }
+   ]
+  },
+  "R0.N1~w2": {
+   "stage": 1,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N1~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N1~w2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N1~w2/m"
+    }
+   ]
+  },
+  "R0.N1~w2/w": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N1~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N1~w2/2"
+    }
+   ]
+  },
+  "R0.N1~w2/m": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N1~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N1~w2/2"
+    }
+   ]
+  },
+  "R0.N1~w2/2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N1~w2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N1~m2": {
+   "stage": 1,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N1~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N1~m2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N1~m2/m"
+    }
+   ]
+  },
+  "R0.N1~m2/w": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N1~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N1~m2/2"
+    }
+   ]
+  },
+  "R0.N1~m2/m": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N1~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N1~m2/2"
+    }
+   ]
+  },
+  "R0.N1~m2/2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N1~m2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N2~w2": {
+   "stage": 1,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N2~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N2~w2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N2~w2/m"
+    }
+   ]
+  },
+  "R0.N2~w2/w": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N2~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N2~w2/2"
+    }
+   ]
+  },
+  "R0.N2~w2/m": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N2~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N2~w2/2"
+    }
+   ]
+  },
+  "R0.N2~w2/2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N2~w2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N2~m2": {
+   "stage": 1,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N2~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N2~m2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N2~m2/m"
+    }
+   ]
+  },
+  "R0.N2~m2/w": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N2~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N2~m2/2"
+    }
+   ]
+  },
+  "R0.N2~m2/m": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N2~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N2~m2/2"
+    }
+   ]
+  },
+  "R0.N2~m2/2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N2~m2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N3~w2": {
+   "stage": 1,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N3~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N3~w2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N3~w2/m"
+    }
+   ]
+  },
+  "R0.N3~w2/w": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N3~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N3~w2/2"
+    }
+   ]
+  },
+  "R0.N3~w2/m": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N3~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N3~w2/2"
+    }
+   ]
+  },
+  "R0.N3~w2/2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N3~w2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N3~m2": {
+   "stage": 1,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N3~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N3~m2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N3~m2/m"
+    }
+   ]
+  },
+  "R0.N3~m2/w": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N3~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N3~m2/2"
+    }
+   ]
+  },
+  "R0.N3~m2/m": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N3~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N3~m2/2"
+    }
+   ]
+  },
+  "R0.N3~m2/2": {
+   "stage": 1,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N3~m2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N4~w": {
+   "stage": 2,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~w",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N4~w/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N4~w/m"
+    }
+   ]
+  },
+  "R0.N4~w/w": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~w",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N4~w/2"
+    }
+   ]
+  },
+  "R0.N4~w/m": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~w",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N4~w/2"
+    }
+   ]
+  },
+  "R0.N4~w/2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~w",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N4~w2": {
+   "stage": 2,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N4~w2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N4~w2/m"
+    }
+   ]
+  },
+  "R0.N4~w2/w": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N4~w2/2"
+    }
+   ]
+  },
+  "R0.N4~w2/m": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N4~w2/2"
+    }
+   ]
+  },
+  "R0.N4~w2/2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~w2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N4~m2": {
+   "stage": 2,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N4~m2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N4~m2/m"
+    }
+   ]
+  },
+  "R0.N4~m2/w": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N4~m2/2"
+    }
+   ]
+  },
+  "R0.N4~m2/m": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N4~m2/2"
+    }
+   ]
+  },
+  "R0.N4~m2/2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N4~m2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N5~w": {
+   "stage": 2,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~w",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N5~w/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N5~w/m"
+    }
+   ]
+  },
+  "R0.N5~w/w": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~w",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N5~w/2"
+    }
+   ]
+  },
+  "R0.N5~w/m": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~w",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N5~w/2"
+    }
+   ]
+  },
+  "R0.N5~w/2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~w",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N5~w2": {
+   "stage": 2,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N5~w2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N5~w2/m"
+    }
+   ]
+  },
+  "R0.N5~w2/w": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N5~w2/2"
+    }
+   ]
+  },
+  "R0.N5~w2/m": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N5~w2/2"
+    }
+   ]
+  },
+  "R0.N5~w2/2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~w2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N5~m2": {
+   "stage": 2,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N5~m2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N5~m2/m"
+    }
+   ]
+  },
+  "R0.N5~m2/w": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N5~m2/2"
+    }
+   ]
+  },
+  "R0.N5~m2/m": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N5~m2/2"
+    }
+   ]
+  },
+  "R0.N5~m2/2": {
+   "stage": 2,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N5~m2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N7~w1": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N7~w1/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N7~w1/m"
+    }
+   ]
+  },
+  "R0.N7~w1/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N7~w1/2"
+    }
+   ]
+  },
+  "R0.N7~w1/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N7~w1/2"
+    }
+   ]
+  },
+  "R0.N7~w1/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~w1",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N7~m1": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~m1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N7~m1/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N7~m1/m"
+    }
+   ]
+  },
+  "R0.N7~m1/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~m1",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N7~m1/2"
+    }
+   ]
+  },
+  "R0.N7~m1/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~m1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N7~m1/2"
+    }
+   ]
+  },
+  "R0.N7~m1/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~m1",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N7~w2": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N7~w2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N7~w2/m"
+    }
+   ]
+  },
+  "R0.N7~w2/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N7~w2/2"
+    }
+   ]
+  },
+  "R0.N7~w2/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N7~w2/2"
+    }
+   ]
+  },
+  "R0.N7~w2/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~w2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N7~m2": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N7~m2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N7~m2/m"
+    }
+   ]
+  },
+  "R0.N7~m2/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N7~m2/2"
+    }
+   ]
+  },
+  "R0.N7~m2/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N7~m2/2"
+    }
+   ]
+  },
+  "R0.N7~m2/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N7~m2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N8~w1": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N8~w1/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N8~w1/m"
+    }
+   ]
+  },
+  "R0.N8~w1/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N8~w1/2"
+    }
+   ]
+  },
+  "R0.N8~w1/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N8~w1/2"
+    }
+   ]
+  },
+  "R0.N8~w1/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~w1",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N8~m1": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~m1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N8~m1/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N8~m1/m"
+    }
+   ]
+  },
+  "R0.N8~m1/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~m1",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N8~m1/2"
+    }
+   ]
+  },
+  "R0.N8~m1/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~m1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N8~m1/2"
+    }
+   ]
+  },
+  "R0.N8~m1/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~m1",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N8~w2": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N8~w2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N8~w2/m"
+    }
+   ]
+  },
+  "R0.N8~w2/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N8~w2/2"
+    }
+   ]
+  },
+  "R0.N8~w2/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N8~w2/2"
+    }
+   ]
+  },
+  "R0.N8~w2/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~w2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N8~m2": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N8~m2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N8~m2/m"
+    }
+   ]
+  },
+  "R0.N8~m2/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N8~m2/2"
+    }
+   ]
+  },
+  "R0.N8~m2/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N8~m2/2"
+    }
+   ]
+  },
+  "R0.N8~m2/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N8~m2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N9~w1": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N9~w1/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N9~w1/m"
+    }
+   ]
+  },
+  "R0.N9~w1/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N9~w1/2"
+    }
+   ]
+  },
+  "R0.N9~w1/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N9~w1/2"
+    }
+   ]
+  },
+  "R0.N9~w1/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~w1",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N9~w2": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N9~w2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N9~w2/m"
+    }
+   ]
+  },
+  "R0.N9~w2/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N9~w2/2"
+    }
+   ]
+  },
+  "R0.N9~w2/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N9~w2/2"
+    }
+   ]
+  },
+  "R0.N9~w2/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~w2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N9~m2": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N9~m2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N9~m2/m"
+    }
+   ]
+  },
+  "R0.N9~m2/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N9~m2/2"
+    }
+   ]
+  },
+  "R0.N9~m2/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N9~m2/2"
+    }
+   ]
+  },
+  "R0.N9~m2/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N9~m2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N10~w1": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N10~w1/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N10~w1/m"
+    }
+   ]
+  },
+  "R0.N10~w1/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N10~w1/2"
+    }
+   ]
+  },
+  "R0.N10~w1/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~w1",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N10~w1/2"
+    }
+   ]
+  },
+  "R0.N10~w1/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~w1",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N10~w2": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N10~w2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N10~w2/m"
+    }
+   ]
+  },
+  "R0.N10~w2/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N10~w2/2"
+    }
+   ]
+  },
+  "R0.N10~w2/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~w2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N10~w2/2"
+    }
+   ]
+  },
+  "R0.N10~w2/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~w2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "R0.N10~m2": {
+   "stage": 3,
+   "beats": [
+    {
+     "clip": "G27",
+     "line": "G27"
+    }
+   ],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N10~m2/w"
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      },
+      {
+       "line": "WR0"
+      }
+     ],
+     "next": "R0.N10~m2/m"
+    }
+   ]
+  },
+  "R0.N10~m2/w": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "חכי! רק תגידי לי מה קרה.",
+     "kind": "miss",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N10~m2/2"
+    }
+   ]
+  },
+  "R0.N10~m2/m": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~m2",
+     "trustSet": 2
+    },
+    {
+     "text": "טוב. אם את לא רוצה, אני לא אכריח.",
+     "kind": "wrong",
+     "trust": 0,
+     "beats": [
+      {
+       "clip": "G27L",
+       "loop": true,
+       "hold": 3
+      }
+     ],
+     "next": "R0.N10~m2/2"
+    }
+   ]
+  },
+  "R0.N10~m2/2": {
+   "stage": 3,
+   "beats": [],
+   "idle": "G27L",
+   "options": [
+    {
+     "text": "סליחה. לא הקשבתי טוב. אני פה, ולא ממהר/ת.",
+     "kind": "best",
+     "beats": [
+      {
+       "clip": "M03"
+      },
+      {
+       "clip": "G11",
+       "line": "G11"
+      }
+     ],
+     "next": "N10~m2",
+     "trustSet": 2
+    }
+   ]
+  },
+  "C1": {
+   "beats": [
+    {
+     "clip": "G11",
+     "line": "G11"
+    },
+    {
+     "clip": "M02"
+    },
+    {
+     "hold": 3
+    },
+    {
+     "black": 0.6
+    },
+    {
+     "line": "NR03a"
+    },
+    {
+     "line": "NR03b"
+    }
+   ],
+   "idle": "M02",
+   "next": "D1"
+  },
+  "D1": {
+   "beats": [
+    {
+     "line": "NR04a"
+    },
+    {
+     "line": "NR04b"
+    },
+    {
+     "line": "NR04c"
+    },
+    {
+     "line": "NR04d"
+    },
+    {
+     "line": "NR04e"
+    },
+    {
+     "line": "NR04f"
+    },
+    {
+     "line": "NR04g"
+    },
+    {
+     "line": "NR04h1"
+    },
+    {
+     "line": "NR04h2"
+    }
+   ],
+   "idle": "M02"
+  }
+ },
+ "debrief": {
+  "title": "ארבע הפעולות",
+  "rows": [
+   {
+    "label": "זיהוי סימני מצוקה",
+    "nodes": [
+     "N0"
+    ],
+    "ok": "בחרתם נכון בפעם הראשונה",
+    "retry": "תיקנתם"
+   },
+   {
+    "label": "הקשבה",
+    "nodes": [
+     "N1",
+     "N2",
+     "N3"
+    ],
+    "ok": "בחרתם נכון בפעם הראשונה",
+    "retry": "תיקנתם"
+   },
+   {
+    "label": "שאלה ישירה",
+    "nodes": [
+     "N4",
+     "N5",
+     "N5a"
+    ],
+    "ok": "בחרתם נכון בפעם הראשונה",
+    "retry": "תיקנתם"
+   },
+   {
+    "label": "שכנוע והפניה",
+    "nodes": [
+     "N6",
+     "N7",
+     "N8",
+     "N9",
+     "N10",
+     "N10h"
+    ],
+    "ok": "בחרתם נכון בפעם הראשונה",
+    "retry": "תיקנתם"
+   }
+  ],
+  "footer": [
+   "צריכים לדבר?",
+   "ער\"ן: 1201, 24/7 | וואטסאפ: 052-8451201 (8:00 עד חצות) | ער\"ן בערבית: 1201, שלוחה 7",
+   "סה\"ר, סיוע והקשבה ברשת: sahar.org.il",
+   "בחירום: מד\"א 101 · משטרה 100",
+   "בבית הספר: היועצת · הפסיכולוג/ית החינוכי/ת · המנהל/ת",
+   "נועה היא דמות שנוצרה בבינה מלאכותית, והקול שלה סינתטי.",
+   "היא לא תלמידה אמיתית, ולא נעשה שימוש בקול או בדמות של נערה אמיתית.",
+   "הקריינות: הקול המשובט של פרופ' זהר אליוסף.",
+   "על פי תוכנית שומרי סף של פרופ' יוסי לוי-בלז."
+  ]
+ },
+ "trustRange": [
+  0,
+  12
+ ]
+}

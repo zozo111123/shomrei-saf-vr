@@ -38,14 +38,35 @@ export function createPersonCard(opts) {
   const camLocal = new THREE.Vector3(0, groundYc + shot.height, shot.dist);
   const asAlpha = t => { t.repeat.set(1, 0.5); t.offset.set(0, 0); return t; };   // built-in materials read the alpha half
 
-  const videos = {}, textures = {};
-  for (const [name, url] of Object.entries(opts.sources ?? {})) {
+  const videos = {}, textures = {}, urls = {};
+  // opts.pool: many clips, but only two <video> players that take turns (phones and headsets cap open media
+  // players). The incoming clip loads into the idle player and the cross-fade starts once it is playing.
+  const mkPlayer = () => {
+    const v = document.createElement('video');
+    Object.assign(v, { muted: true, playsInline: true, crossOrigin: 'anonymous', preload: 'auto', loop: false });
+    v.setAttribute('playsinline', '');
+    const t = new THREE.VideoTexture(v); t.colorSpace = THREE.NoColorSpace;
+    const p = { v, t: asAlpha(t), name: null };
+    v.addEventListener('ended', () => { if (p === curP && !loopCur && onEnd) { const cb = onEnd; onEnd = null; cb(); } });
+    return p;
+  };
+  const pool = opts.pool ? [mkPlayer(), mkPlayer()] : null;
+  let curP = null;
+  // clips can be added later (a long branching story loads them as it goes)
+  function add(name, url) {
+    if (pool) { urls[name] = url; return; }
+    if (videos[name]) return videos[name];
     const v = document.createElement('video');
     Object.assign(v, { src: url, muted: true, playsInline: true, crossOrigin: 'anonymous', preload: 'auto', loop: false });
     v.setAttribute('playsinline', '');
     const t = new THREE.VideoTexture(v); t.colorSpace = THREE.NoColorSpace;   // colour is decoded in the shader, alpha stays raw t.minFilter = THREE.LinearFilter; t.generateMipmaps = false;
     videos[name] = v; textures[name] = asAlpha(t);
+    v.addEventListener('ended', () => {
+      if (name === current && !loopCur && onEnd) { const cb = onEnd; onEnd = null; cb(); }
+    });
+    return v;
   }
+  for (const [name, url] of Object.entries(opts.sources ?? {})) add(name, url);
   const mkImgTex = () => { const t = asAlpha(new THREE.Texture()); t.colorSpace = THREE.NoColorSpace; t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; return t; };
   const imgTex = mkImgTex(), imgTex2 = mkImgTex();
   const depthTex = new THREE.TextureLoader().load(opts.depth); depthTex.colorSpace = THREE.NoColorSpace;
@@ -141,6 +162,21 @@ export function createPersonCard(opts) {
     front = back; depthMat.alphaMap = tex;
   };
   function show(name, { loop = false, fade = 0.35, from = 0, ended = null } = {}) {
+    if (pool) {
+      if (!urls[name]) throw new Error('unknown clip: ' + name);
+      const p = pool[0] === curP ? pool[1] : pool[0], old = curP;
+      curP = p; p.name = name; current = name; onEnd = ended; loopCur = loop;
+      const v = p.v; v.loop = loop;
+      const go = () => {
+        if (curP !== p) return;                          // another clip was asked for meanwhile
+        setFront(p.t); fadeT = 0; fadeDur = fade;
+        if (old && old !== p) setTimeout(() => { if (curP !== old) old.v.pause(); }, fade * 1000 + 100);
+      };
+      if (v.getAttribute('src') !== urls[name]) v.src = urls[name];
+      v.currentTime = from;
+      v.addEventListener('playing', go, { once: true });
+      return v.play().catch(() => {});
+    }
     const v = videos[name];
     v.loop = loop; v.currentTime = from;
     const p = v.play().catch(() => {});
@@ -149,9 +185,6 @@ export function createPersonCard(opts) {
     current = name; onEnd = ended; loopCur = loop;
     return p;
   }
-  for (const [name, v] of Object.entries(videos)) v.addEventListener('ended', () => {
-    if (name === current && !loopCur && onEnd) { const cb = onEnd; onEnd = null; cb(); }
-  });
   // film rendering: show a decoded packed frame (an HTMLImageElement / ImageBitmap); no cross-fade
   function setImage(img, img2 = null, k = 0) {
     imgTex.image = img; imgTex.needsUpdate = true;
@@ -171,16 +204,18 @@ export function createPersonCard(opts) {
     layers[1 - front].material.uniforms.uFade.value = 1 - k;
     layers[front].renderOrder = 3; layers[1 - front].renderOrder = 4;   // the outgoing clip fades over the incoming one
     if (current && !loopCur && onEnd) {
-      const v = videos[current];
+      const v = pool ? curP.v : videos[current];
       if (v.duration && v.currentTime >= v.duration - 0.06) { const cb = onEnd; onEnd = null; cb(); }
     }
   }
   // browsers allow video playback only after a user gesture: call this inside the start click.
   // (the pause runs later, asynchronously: never pause the clip that is on screen by then)
-  function unlock() { for (const v of Object.values(videos)) { v.play().then(() => { if (v !== videos[current]) v.pause(); }).catch(() => {}); } }
+  function unlock() {
+    if (pool) { for (const p of pool) if (p !== curP && p.v.getAttribute('src')) p.v.play().then(() => { if (p !== curP) p.v.pause(); }).catch(() => {}); return; }
+    for (const v of Object.values(videos)) { v.play().then(() => { if (v !== videos[current]) v.pause(); }).catch(() => {}); } }
   const head = new THREE.Vector3();
   return {
-    group: g, videos, show, update, unlock, setImage, cards: layers, caster, contact,
+    group: g, videos: pool ? { a: pool[0].v, b: pool[1].v } : videos, add, show, update, unlock, setImage, cards: layers, caster, contact,
     // film: draw the card after the world, testing against the world's depth texture
     useSceneDepth(tex, w, h, near, far) {
       for (const l of layers) { const u = l.material.uniforms; u.uSceneDepth.value = tex; u.uUseSceneDepth.value = tex ? 1 : 0; u.uRes.value.set(w, h); u.uNear.value = near; u.uFar.value = far; }
