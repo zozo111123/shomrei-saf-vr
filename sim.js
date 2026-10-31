@@ -21,7 +21,10 @@ import { makeBubble, makeSubtitles, makeReticle, makeStageStrip, makeDebrief, ma
 import { createLook } from './controls.js';
 
 const q = new URLSearchParams(location.search);
-const G = await (await fetch(q.get('story') || 'story/graph.json')).json();
+// ?story= may only name a conversation file of this site (story/*.json): a link must not load someone else's text
+const storyUrl = new URL(q.get('story') || 'story/graph.json', location.href);
+if (storyUrl.origin !== location.origin || !/\/story\/[\w-]+\.json$/.test(storyUrl.pathname)) throw new Error('story must be a story/*.json file of this site');
+const G = await (await fetch(storyUrl)).json();
 const DWELL = 1.8;
 
 // ---------- renderer, scene, camera ----------
