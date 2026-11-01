@@ -2,7 +2,7 @@
 // Code and texts (html, js, json) come from the network when there is one, so fixes always arrive; the cache is
 // the fallback offline. Media (mp4, mp3, png, fonts) come from the cache first: they are large and never change
 // under the same name.
-const VERSION = 'sim-v2';
+const VERSION = 'sim-v3';
 const MEDIA = /\.(mp4|mp3|png|jpg|woff2?|ttf)(\?|$)/;
 self.addEventListener('install', e => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil((async () => {

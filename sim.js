@@ -16,6 +16,7 @@ import * as THREE from 'three';
 import { VRButton } from 'three/addons/webxr/VRButton.js';
 import { createYard, setupRenderer, PERSON_SPOT } from './scene/index.js';
 import { createPersonCard } from './scene/vrperson.js';
+import { createSchool } from './scene/school.js';
 import { buildBench } from './scene/bench.js';
 import { makeBubble, makeSubtitles, makeReticle, makeStageStrip, makeDebrief, makeTextPanel, loadFonts } from './scene/ui.js';
 import { createLook } from './controls.js';
@@ -44,7 +45,10 @@ else navigator.xr.isSessionSupported('immersive-vr').then(ok => { if (!ok) vrBut
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(70, innerWidth / innerHeight, 0.05, 9000);
 scene.add(camera);
-const world = createYard({ renderer, world: 'meadow', quality: q.get('quality') || 'vr', viewHeight: innerHeight });
+// the world: the schoolyard (a photoreal 360 courtyard, G.world) or the code-built meadow
+const WORLD = q.get('world') || G.world || 'school';
+const world = WORLD === 'meadow' ? createYard({ renderer, world: 'meadow', quality: q.get('quality') || 'vr', viewHeight: innerHeight })
+  : createSchool({ pano: q.get('pano') || 'world/school/pano.jpg', groundY: PERSON_SPOT.seat[1] - 0.45, yaw: +(q.get('yaw') ?? 90) * Math.PI / 180, viewHeight: innerHeight });
 scene.add(world.group);
 
 const groundY = PERSON_SPOT.seat[1] - 0.45;
@@ -304,7 +308,7 @@ async function begin(g) {
   listener.context.resume();
   person.unlock();
   startEl.style.display = 'none';
-  await Promise.all([audioReady, clipsReady]);
+  await Promise.all([audioReady, clipsReady, world.ready]);
   person.unlock();
   start();
 }
